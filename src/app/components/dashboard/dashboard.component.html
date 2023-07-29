@@ -1,0 +1,97 @@
+<br><br>
+<form [formGroup]="form" #EditUserInfo="ngForm" (ngSubmit)="editUserInfo(EditUserInfo.value)">
+
+    <div class="container">
+        <div class="row">
+            <button *ngIf="!isEditable" (click)="edit()">Edit</button>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>First Name:</label>
+            </div>
+            <div class="col-75">
+                <div *ngIf="!isEditable">
+                    <input readonly formControlName="firstName" class="input no-outline" type="text"
+                        placeholder="Enter First Name">
+                </div>
+                <div *ngIf="isEditable">
+                    <input formControlName="firstName" class="input no-outline" type="text"
+                        placeholder="Enter First Name">
+                    <span class="hint"
+                        *ngIf="form.controls['firstName'].errors?.['required'] && form.controls['firstName'].touched">
+                        First Name is required
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Last Name:</label>
+            </div>
+            <div class="col-75">
+                <div *ngIf="!isEditable">
+                    <input readonly formControlName="lastName" class="input no-outline" type="text"
+                        placeholder="Enter Last Name">
+                </div>
+                <div *ngIf="isEditable">
+                    <input formControlName="lastName" class="input no-outline" type="text"
+                        placeholder="Enter Last Name">
+                    <span class="hint"
+                        *ngIf="form.controls['lastName'].errors?.['required'] && form.controls['lastName'].touched">
+                        Last Name is required
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>PAN Number:</label>
+            </div>
+            <div class="col-75">
+                <div *ngIf="!isEditable">
+                    <input readonly formControlName="panNumber" class="input no-outline" type="text"
+                        placeholder="Enter PAN number">
+                </div>
+                <div *ngIf="isEditable">
+                    <input formControlName="panNumber" class="input no-outline" type="text"
+                        placeholder="Enter PAN number">
+                    <span class="hint"
+                        *ngIf="form.controls['panNumber'].errors?.['required'] && form.controls['panNumber'].touched">
+                        PAN number is required
+                    </span>
+                    <span class="hint"
+                        *ngIf="form.controls['panNumber'].errors?.['pattern'] && form.controls['panNumber'].touched">Enter
+                        a
+                        Valid PAN number</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Bank Account Number:</label>
+            </div>
+            <div class="col-75">
+                <div *ngIf="!isEditable">
+                    <input formControlName="bankAccountNumber" class="input no-outline" type="text"
+                        placeholder="Enter Bank Account Number number" readonly>
+                </div>
+                <div *ngIf="isEditable">
+                    <input formControlName="bankAccountNumber" class="input no-outline" type="text"
+                        placeholder="Enter Bank Account Number number">
+                    <span class="hint"
+                        *ngIf="form.controls['bankAccountNumber'].errors?.['required'] && form.controls['bankAccountNumber'].touched">Bank
+                        Account Number number
+                        is required</span>
+                    <span class="hint"
+                        *ngIf="form.controls['bankAccountNumber'].errors?.['pattern'] && form.controls['bankAccountNumber'].touched">Enter
+                        a Valid Bank Account Number number</span>
+                </div>
+            </div>
+
+        </div>
+        <div style="text-align: center;">
+        <button *ngIf="isEditable" style=" text-align: center;" type="submit" class="head-foot">Submit</button>
+        <button *ngIf="isEditable" style="background-color: #FF4500; text-align: center;" (click)="cancel()" class="head-foot">Cancel</button>
+    </div>
+    </div>
+</form>

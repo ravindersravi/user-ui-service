@@ -1,0 +1,27 @@
+.nav-bg {
+     background-color: #1f5ba0 ;
+     /* kjj 3391*/
+    padding-bottom: 0%;
+    
+}
+.icon {
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+    margin-left: 2%;
+    
+}
+
+html, body {
+    height: 90%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  .content {
+    flex-grow: 1;
+  }

@@ -1,0 +1,26 @@
+  <nav class="nav-bg">
+    <a routerLink="/">
+        <img class="icon" src="../assets/epay_logo.png"  alt="Logo" width="9%">
+    </a>
+    <div class="lightbox-btn-container" (mouseover)="openLightbox()" (mouseout)="closeLightbox()">
+        <button #lightboxButton> <i class="fa fa-user"></i>Login</button>
+        <div class="lightbox-content" #lightbox>
+          <div class="window-box">
+            <div class="half">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet necessitatibus ducimus consequuntur repellendus,
+                 mollitia ea inventore eveniet voluptatum ipsa cumque.</p>
+              <button class="navy-blue-button" ><a href="/user/login">Login</a></button>
+            </div>
+            <div class="half">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Eveniet necessitatibus ducimus consequuntur repellendus,
+                  mollitia ea inventore eveniet voluptatum ipsa cumque.</p>
+              <button class="navy-blue-button"><a href="/user/register">Register</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </nav>

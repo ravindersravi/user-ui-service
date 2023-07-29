@@ -1,0 +1,24 @@
+<!-- <nav class="nav-bg">
+    <a routerLink="/">
+        <img class="icon" src="../assets/epay_logo.png"  alt="Logo" width="9%">
+      </a>
+     
+    
+   
+</nav>
+<app-navbar></app-navbar>
+<nav>
+
+<router-outlet></router-outlet> -->
+
+
+
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <div class="content">
+        <app-image-carousel *ngIf="showCarousel"></app-image-carousel>
+      <router-outlet></router-outlet>
+   
+    </div>
+    <app-footer></app-footer>
+  </div>

@@ -1,0 +1,18 @@
+<form [formGroup]="form" #LoginInfo="ngForm" (ngSubmit)="loginUser(LoginInfo.value)">
+       <br><br>
+        <div>
+    <input formControlName="emailId" class="input" type="email" placeholder="Enter Email">
+    <div><span class="hint" *ngIf="form.controls['emailId'].errors?.['required'] && form.controls['emailId'].touched">Email is required</span>
+    <span class="hint" *ngIf="form.controls['emailId'].errors?.['email']">Please enter valid email address</span>
+</div></div>
+<div>
+    <input formControlName="password"  class="input" type="password" placeholder="Enter password">
+    <div><span class="hint" *ngIf="form.controls['password'].errors?.['required'] && form.controls['password'].touched">Password is required</span>
+    <span class="hint" *ngIf="form.controls['password'].errors?.['pattern'] && form.controls['password'].touched">Password must contain at least one number, one uppercase and a
+        lowercase letter and at least 8 characters<br />Password cannot contain whitespace</span>
+</div>
+<button type="submit" class="head-foot">Login</button>
+    
+    </div>
+    <div class = "anchor"><a href="/user/register"> Register</a></div>
+</form>

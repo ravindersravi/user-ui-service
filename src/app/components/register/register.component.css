@@ -1,0 +1,32 @@
+
+.hint {
+    color: red;
+    margin-bottom: 1%; 
+    text-align: center;
+    width: 100%;
+ }
+ div{
+    text-align: center;
+ }
+.head-foot {
+    background-color: #1f5ba0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 400px;
+    text-align: center;
+  }
+
+  .input {
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: -webkit-center;
+  }
+  
+  

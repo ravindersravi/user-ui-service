@@ -1,0 +1,6 @@
+<div class="carousel">
+    <img [src]="currentImage" alt="carousel-image" class ="carousel-img" />
+    <div class="carousel-dots">
+      <span *ngFor="let image of images; let i = index" (click)="changeImageByIndex(i)" [class.active]="i === currentImageIndex" class="dot"></span>
+    </div>
+  </div>

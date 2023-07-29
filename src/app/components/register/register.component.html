@@ -1,0 +1,76 @@
+<form [formGroup]="form" #LoginInfo="ngForm" (ngSubmit)="registerUser(LoginInfo.value)">
+    <div>
+        <div><input formControlName="firstName" class="input" type="text" placeholder="Enter First Name">
+            <div>
+                <span class="hint"
+                    *ngIf="form.controls['firstName'].errors?.['required'] && form.controls['firstName'].touched">First
+                    Name is
+                    required</span>
+            </div>
+        </div>
+        <div><input formControlName="lastName" class="input" type="text" placeholder="Enter Last Name">
+            <div>
+                <span class="hint"
+                    *ngIf="form.controls['lastName'].errors?.['required'] && form.controls['lastName'].touched">Last
+                    Name is
+                    required</span>
+            </div>
+        </div>
+        <div>
+            <input formControlName="emailId" class="input" type="email" placeholder="Enter Email">
+            <div><span class="hint"
+                    *ngIf="form.controls['emailId'].errors?.['required'] && form.controls['emailId'].touched">Email is
+                    required</span>
+                <span class="hint" *ngIf="form.controls['emailId'].errors?.['email']">Please enter valid email
+                    address</span>
+            </div>
+        </div>
+        <div>
+            <input formControlName="password" class="input" type="password" placeholder="Enter password">
+            <div><span class="hint"
+                    *ngIf="form.controls['password'].errors?.['required'] && form.controls['password'].touched">Password
+                    is required</span>
+                <span class="hint"
+                    *ngIf="form.controls['password'].errors?.['pattern'] && form.controls['password'].touched">Password
+                    must contain at least one number, one uppercase and a
+                    lowercase letter and at least 8 characters<br />Password cannot contain whitespace</span>
+            </div>
+        </div>
+        <div>
+            <input formControlName="confirmPassword" class="input" type="password" placeholder="Enter password again">
+            <div><span class="hint"
+                    *ngIf="form.controls['confirmPassword'].errors?.['required'] && form.controls['confirmPassword'].touched">Confirm Password
+                    is required</span>
+                <span class="hint"
+                    *ngIf="form.controls['confirmPassword'].errors?.['pattern'] && form.controls['confirmPassword'].touched">Confirm Password
+                    must contain at least one number, one uppercase and a
+                    lowercase letter and at least 8 characters<br />Password cannot contain whitespace</span>
+            </div>
+        </div>
+        <div>
+            <input formControlName="panNumber" class="input" type="text" placeholder="Enter PAN number">
+            <div><span class="hint"
+                    *ngIf="form.controls['panNumber'].errors?.['required'] && form.controls['panNumber'].touched">PAN number
+                    is required</span>
+                <span class="hint"
+                    *ngIf="form.controls['panNumber'].errors?.['pattern'] && form.controls['panNumber'].touched">Enter a Valid PAN number</span>
+            </div>
+        </div>
+        <div>
+            <input formControlName="bankAccountNumber" class="input" type="text" placeholder="Enter Bank Account Number number">
+            <div><span class="hint"
+                    *ngIf="form.controls['bankAccountNumber'].errors?.['required'] && form.controls['bankAccountNumber'].touched">Bank Account Number number
+                    is required</span>
+                <span class="hint"
+                *ngIf="form.controls['bankAccountNumber'].errors?.['pattern'] && form.controls['bankAccountNumber'].touched">Enter a Valid Bank Account Number number</span>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="head-foot">Register</button>
+
+        </div>
+    </div>
+    <!-- <div><a href="/user/login">Login</a></div> -->
+    <!-- <br> -->
+
+</form>
